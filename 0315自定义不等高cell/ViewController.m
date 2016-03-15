@@ -7,16 +7,29 @@
 //
 
 #import "ViewController.h"
-
+#import "WHStatuses.h"
+#import "WHStatusesCell.h"
+#import "MJExtension.h"
 @interface ViewController ()
+
+@property (nonatomic, strong) NSArray *statuses;
 
 @end
 
 @implementation ViewController
 
+- (NSArray *)statuses
+{
+    if (_statuses == nil) {
+        _statuses = [WHStatuses objectArrayWithFilename:@"statuses.plist"];
+    }
+    return _statuses;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"%@",self.statuses);
 }
 
 - (void)didReceiveMemoryWarning {

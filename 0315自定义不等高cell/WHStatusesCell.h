@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WHStatusesCell.h
 //  0315自定义不等高cell
 //
 //  Created by LeeWiHong on 16/3/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
-
+@interface WHStatusesCell : UITableViewCell
 
 @end
-
